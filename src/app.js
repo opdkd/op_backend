@@ -21,7 +21,6 @@ app.use(cookieParser());
 
 // Debugging middleware to log incoming requests
 app.use((req, res, next) => {
-    console.log('Headers:', req.headers);
     console.log('Body:', req.body);
     next();
 });
