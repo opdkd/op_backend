@@ -5,8 +5,8 @@ import { app } from "./app.js";
 
 dotenv.config({ path: "./env" });
 const port = process.env.PORT || 3000;
-
-dbConection();
+const db = await dbConection();
+console.log("database connection",db);
 app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`);
 });
